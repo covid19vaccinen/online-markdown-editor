@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv-SE" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+base-uri 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+child-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+connect-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+font-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+form-action 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+frame-ancestors 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+frame-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+img-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+media-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+object-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+prefetch-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+script-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+style-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+worker-src 'self' https://covid19vaccinen.se https://covid19vaccinen.se/files;
+">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel Redigerare</title>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAARVBMVEUAAADlTUTkTUPlTUPkTETlTErlTETlTUPlTUPkTUTkTULkTUTkTUTkTkXlTUTjTELlTUTkTUPlTETlTUT3aF7tWE/zYli3in9XAAAAE3RSTlMAzeJCmgi/UhKyJ2H3jTIbaqV/tmvZ6gAAAQ1JREFUOMuVU9mSgzAMi5070O0h4P8/deO0YEK7ZVYz+AFpfCi2OSAO5iss8LfC+1WQ/EcBUw2BayA+cj+2BhdqyMIFJ9Ws8gW4yf+ULLFNSZQRsJoACL6mYDSwJLgDcTfcHbkQNlBxyP04j41cZgAjnOlRxhc/T5MoUJTzUpOgAghIevJPAVG+VKblVlwy0WbYlYGp5Vbw1SgS3gVIL9LG+rXiy8Y1rX1yESBiaI+zBBEzEXBrgkC9AItECgEYtMQbWgltUtE3qWNi+TimGgXprOkmNWpn9drfLH6o1cfHUsOK6eGwor3JiOz3dMxw/cI8EAbTrZw5rJwD4unSnq39t8M5OT3v/3G8p+f/C7l7H1EoVTVYAAAAAElFTkSuQmCC">
+<link rel="stylesheet" href="editor.css" type="text/css">
+<script src="parser.js" type="text/javascript" defer></script>
+<script src="purify.js" type="text/javascript" defer></script>
+<script src="functions.js" type="text/javascript" defer></script>
+</head>
+<body>
+<header>
+<h1><svg height="40" width="320" xmlns="http://www.w3.org/2000/svg">
+<rect fill="orange" height="40" rx="4" ry="4" width="320" />
+<text dominant-baseline="middle" fill="#333" font-family="arial" font-size="30" text-anchor="middle" x="50%" y="50%">Artikel Editor</text>
+</svg></h1>
+<nav>
+<a href="javascript:void(0);" onclick="clearText()">Rensa MD</a>
+<a href="javascript:void(0);" onclick="copymdText()">Kopiera MD</a>
+<a href="javascript:void(0);" onclick="downloadmdFile()">Ladda Ner MD</a>
+<a href="javascript:void(0);" onclick="copyhtmlText()">Kopiera HTML</a>
+</nav>
+</header>
+<input type="text" id="fileNameInput" placeholder="MD filens namn">
+<div class="container">
+<textarea id="editor" placeholder="Skriv din artikel här..."></textarea>
+<div id="result"></div>
+</div>
+</body>
+</html>
